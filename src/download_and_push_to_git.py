@@ -8,6 +8,7 @@ import moodle_downloader
 
 import os
 import datetime
+import sys 
 
 # Instantiate the argument parser
 arg_parser = argparse.ArgumentParser()
@@ -82,9 +83,6 @@ def main_download_moodle_tum():
     args.func(args)
 
 def commit_and_push_git():
-    change_dir = "cd /home/maltosesugar/Documents/my_tum_ds"
-    print(change_dir)
-    os.system(change_dir)
 
     git_status = "git status --porcelain"
     print(git_status)
@@ -109,6 +107,14 @@ def commit_and_push_git():
 
 
 if __name__ == "__main__":
+    change_dir = ""
+    print(change_dir)
+    os.system(change_dir)
+
+    date_now = datetime.datetime.now()
+    stdoutOrigin=sys.stdout 
+    sys.stdout = open(f"log_{date_now}.txt", "w")
+    
     print("Start downloading files from TUM Moodle...")
     main_download_moodle_tum()
     print("Downloading process finished.")
