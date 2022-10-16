@@ -55,6 +55,9 @@ class Resource:
             # TODO what to do with other types?
             if 'pdf' in resource_div.find('img')['src']:
                 return 'url'
+        elif group == ['d-flex', 'flex-column', 'flex-md-row', 'w-100', 'align-self-start']:
+            if 'pdf' in resource_div.find('a')['href'] or 'www.moodle.tum.de/mod/resource' in resource_div.find('a')['href']:
+                return 'url'
         return 'other (e.g. quiz, forum, ...)'
 
     @staticmethod

@@ -1,28 +1,41 @@
 [
   {
-    "course_name": "Analysis für Informatik",
-    "semester": "WS19_20",
+    "course_name": "Foundations in Data Engineering (IN2326)",
     "rules": [
       {
-        "file_pattern": "Hausaufgabe.*",
-        "destination": "C:\\Users\\<yourUsername>\\Documents\\Uni\\Analysis\\Hausaufgaben",
+        "file_pattern": "TODO",
+        "destination": "/home/maltosesugar/Documents/my_tum_ds/tum_sem_02/FDE",
         "update_handling": "update"
-      },
-      {
-        "file_pattern": ".*E-Test.*",
-        "destination": "C:\\Users\\<yourUsername>\\Documents\\Uni\\Analysis\\E-Tests",
-        "update_handling": "replace"
       }
     ]
   },
   {
-    "course_name": "Numerisches Programmieren",
-    "semester": "WS19_20",
+    "course_name": "Maschinelles Lernen (IN2064)",
     "rules": [
       {
-        "file_pattern": "(Übungsblatt.*|Musterlösung Blatt.*)",
-        "destination": "C:\\Users\\<yourUsername>\\Documents\\Uni\\NumProg\\Übungen\\",
-        "update_handling": "add"
+        "file_pattern": "",
+        "destination": "/home/maltosesugar/Documents/my_tum_ds/tum_sem_02/ML",
+        "update_handling": "update"
+      }
+    ]
+  },
+  {
+    "course_name": "Nonlinear Optimization: Advanced [MA3503]",
+    "rules": [
+      {
+        "file_pattern": "",
+        "destination": "/home/maltosesugar/Documents/my_tum_ds/tum_sem_02/NLOpt",
+        "update_handling": "update"
+      }
+    ]
+  },
+  {
+    "course_name": "Introduction to Deep Learning (IN2346)",
+    "rules": [
+      {
+        "file_pattern": "",
+        "destination": "/home/maltosesugar/Documents/my_tum_ds/tum_sem_02/NLOpt",
+        "update_handling": "update"
       }
     ]
   }

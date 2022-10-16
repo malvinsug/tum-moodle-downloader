@@ -25,8 +25,8 @@ class Course:
         # Extract sections for courses structured by weeks
         weeks = self.soup.find('ul', class_='weeks')
         if weeks is not None:
-            sections += weeks.find_all('li', class_='section main clearfix')  # All week secation
-            latest_week_section = weeks.find('li', class_='section main clearfix current')
+            sections += weeks.find_all('li', class_='section course-section main clearfix')  # All week secation
+            latest_week_section = weeks.find('li', class_='section course-section main clearfix current')
             if latest_week_section is not None:
                 sections.append(latest_week_section)
 
@@ -37,7 +37,7 @@ class Course:
 
         # Extract resources from the sections
         for section in sections:
-            section_resources = section.find_all('div', class_='activityinstance')
+            section_resources = section.find_all('div', class_='activityname')
             for resource_div in section_resources:
                 resource = Resource(resource_div, is_recent=(section == latest_week_section))
                 resources[resource.name] = resource
